@@ -8,7 +8,7 @@ import { Provider } from "react-redux";
 //import { createStore, applyMiddleware } from "redux";
 //import { createLogger } from 'redux-logger';
 
-import { createStore, combineReducers } from "redux";
+import { createStore  } from "redux";
 import DevTools from './DevTools';
 import reducer from './reducer';
 
