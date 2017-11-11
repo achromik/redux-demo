@@ -1,5 +1,4 @@
 import React from 'react';
-//import Comment from './Comment.jsx';
 import Comment from "./CommentContainer";
 
 const CommentsList = ({comments}) => 
@@ -10,8 +9,6 @@ const CommentsList = ({comments}) =>
                     key={comment.id}
                     {...comment}
                 />
-                // <CommentContainer key={comment.id}
-                //      {...comment} />
             )}
         </ul>
     </div>;
