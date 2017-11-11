@@ -1,11 +1,8 @@
 import React from 'react';
 import './Comment.css';
-<<<<<<< HEAD
-=======
 import swal from 'sweetalert';
 
 
->>>>>>> middlewares
 
 const DELETE =   <svg width="21" height="21" className="theme-line-0">
                             <use xlinkHref="orion-svg-sprite.svg#delete-circle-1" />
