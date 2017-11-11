@@ -5,20 +5,25 @@ import App from './App.jsx';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from "react-redux";
 
-//import { createStore, applyMiddleware } from "redux";
-//import { createLogger } from 'redux-logger';
-
-import { createStore  } from "redux";
-import DevTools from './DevTools';
 import reducer from './reducer';
 
-// import {createComment} from './actions'
+/** IF YOU WANT USE redux-logger YOU MUST UNCOMMENTS LINES 1-4 AND COMMENTS LINE a-c 
+ * OR OPOSITE FOR USE redux-devtools
+ * 
+ * FOR USE BOTH UNCOMMENT LINES 1-4 and b-c
+ * 
+*/
+// import { createStore, applyMiddleware } from "redux";   // (1)
+import { createStore } from "redux";                    // (a)
 
-//const logger = createLogger();
+import DevTools from './DevTools';              // (b)
+// import { createLogger } from 'redux-logger';   // (2)
+// const logger = createLogger();                 // (3)
+
 const store = createStore(
     reducer
-//    , applyMiddleware(logger)    
-    , DevTools.instrument()
+    , DevTools.instrument()                     // (c)
+//    , applyMiddleware(logger)                    // (4)
 );
 
 ReactDOM.render(
@@ -26,10 +31,5 @@ ReactDOM.render(
         <App />
     </Provider>,
     document.getElementById('root'));
-
-
-    //store.dispatch(createComment('pierwszy komentarz'));
-    //store.dispatch(createComment('drugi komentarz'));
-    
 
 registerServiceWorker();

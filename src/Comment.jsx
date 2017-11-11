@@ -1,6 +1,6 @@
 import React from 'react';
-import './Comment.css'
-;
+import './Comment.css';
+
 const DELETE =   <svg width="21" height="21" className="theme-line-0">
                             <use xlinkHref="orion-svg-sprite.svg#delete-circle-1" />
                         </svg>,
