@@ -12,7 +12,7 @@ import { createStore  } from "redux";
 import DevTools from './DevTools';
 import reducer from './reducer';
 
-import {createComment} from './actions'
+// import {createComment} from './actions'
 
 //const logger = createLogger();
 const store = createStore(
@@ -28,8 +28,8 @@ ReactDOM.render(
     document.getElementById('root'));
 
 
-    store.dispatch(createComment('pierwszy komentarz'));
-    store.dispatch(createComment('drugi komentarz'));
+    //store.dispatch(createComment('pierwszy komentarz'));
+    //store.dispatch(createComment('drugi komentarz'));
     
 
 registerServiceWorker();

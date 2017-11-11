@@ -1,0 +1,18 @@
+.Comment .btn {
+    line-height: 0;
+}
+
+
+.Comment .theme-line-0 {
+    --layer2: #000000;
+    --layer1: #f72e2e;
+}
+  
+.Comment .theme-line-1 {
+    --layer2: #000000;
+    --layer1: #2684ff;
+}
+  
+.Comment .theme-line-2 {
+    --layer1: #a526b6;
+}
