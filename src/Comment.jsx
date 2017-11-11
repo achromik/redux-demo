@@ -1,5 +1,8 @@
 import React from 'react';
 import './Comment.css';
+import swal from 'sweetalert';
+
+
 
 const DELETE =   <svg width="21" height="21" className="theme-line-0">
                             <use xlinkHref="orion-svg-sprite.svg#delete-circle-1" />
@@ -49,9 +52,21 @@ const Comment = ({text, votes, id, thumbUpComment, thumbDownComment, deleteComme
                 type="button"
                 className='btn btn-light' 
                 onClick={() => {
-                    const newText = prompt('Enter new comment\'s text', text);
-                    if(newText) editComment(id, newText)
-                }} 
+                    swal({
+                        text: 'Please edit selected comment',
+                        content:{
+                            element: 'input',
+                            attributes: {
+                                value: text
+                            }
+                        }
+                    })
+                    .then((value) => {
+                        if (value) {
+                            editComment(id, value); 
+                        }
+                    })
+                }}
             >
                 {EDIT}
             </button>
@@ -59,3 +74,5 @@ const Comment = ({text, votes, id, thumbUpComment, thumbDownComment, deleteComme
     </li>;
 
 export default Comment;
+
+
